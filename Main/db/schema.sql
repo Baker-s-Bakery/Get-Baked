@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS bakery_db;
+CREATE DATABASE bakery_db;
