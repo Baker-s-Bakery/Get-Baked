@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Package-lock.json -remove on final push/publish
+package-lock.json
+
