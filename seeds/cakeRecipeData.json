@@ -1,0 +1,52 @@
+[
+    {
+        "Name": "Chocolate",
+        "Flour": "2 Cups",
+        "Vegetable Oil": "1/2 Cup",
+        "Eggs": "2 Large",
+        "Salt": "1 tsp",
+        "Water": "1 Cup (boiling)",
+        "Milk": "1 Cup",
+        "Granulated Sugar": "2 Cups",
+        "Cocoa Powder": "3/4 Cup (unsweetened)",
+        "Espresso Powder": "1 tsp",
+        "Vanilla Extract": "2 tsp",
+        "Baking Powder": "2 tsp",
+        "Baking Soda": "1 1/2 tsp",
+        "bakeTemp": "350",
+        "bakeTime": "30-35 minutes"
+        },
+    {
+        "Name": "White",
+        "Flour": "2 2/3 Cups, 2 tablespoon",
+        "Vegetable Oil": "2/3 Cup",
+        "Butter": "6 tablespoons (softened)",
+        "Eggs": "6 Large (whites only)",
+        "Salt": "1 tsp",
+        "Milk": "1 Cup",
+        "Granulated Sugar": "2 Cups",
+        "Vanilla Extract": "1 tsp (clear)",
+        "Baking Powder": "1 tablespoon",
+        "bakeTemp": "350",
+        "bakeTime": "35-45 minutes"
+    },
+    {
+        "Name": "Red Velvet",
+        "Flour": "3 Cups",
+        "Vegetable Oil": "1 Cup",
+        "Butter": "1/2 cup",
+        "Eggs": "4 Large (Room Temp, Separated)",
+        "Salt": "1/2 tsp",
+        "Water": "1 Cup (boiling)",
+        "Buttermilk": "1 Cup",
+        "White Vinegar": "1 tsp",
+        "Granulated Sugar": "2 Cups",
+        "Cocoa Powder": "2 tablespoons (unsweetened)",
+        "Vanilla Extract": "1 tablespoon",
+        "Baking Powder": "2 tsp",
+        "Baking Soda": "1 tsp",
+        "Red Food Coloring": "As Needed",
+        "bakeTemp": "350",
+        "bakeTime": "30-32 minutes, refigerate for 30 minutes"
+    }
+]

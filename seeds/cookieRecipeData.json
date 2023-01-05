@@ -1,0 +1,44 @@
+[
+    {
+        "Name": "Chocolate Chip",
+        "Makes": "3 Dozen",
+        "Flour": "3 Cups",
+        "Butter": "1 Cup (Softened)",
+        "Eggs": "2 Large",
+        "Salt": "1 tsp",
+        "Granulated Sugar": "1 Cup",
+        "Brown Sugar": "1 Cup",
+        "Chocolate Chips": "2 Cups",
+        "Vanilla Extract": "2 tsp",
+        "Baking Soda": "1/2 tsp",
+        "bakeTemp": "375",
+        "bakeTime": "8-10 minutes"
+        },
+    {
+        "Name": "Sugar",
+        "Makes": "4 Dozen",
+        "Flour": "2 3/4 Cups",
+        "Butter": "1 Cup (Softened)",
+        "Eggs": "1 Large",
+        "Granulated Sugar": "1 1/2 Cup",
+        "Vanilla Extract": "1 tsp",
+        "Baking Powder": "1 tsp",
+        "bakeTemp": "375",
+        "bakeTime": "8-10 minutes"
+    },
+    {
+        "Name": "Peanut Butter",
+        "Makes": "4 Dozen",
+        "Flour": "2 1/2 Cups",
+        "Butter": "1 Cup (Softened)",
+        "Eggs": "2 Large",
+        "Salt": "1/2 tsp",
+        "Granulated Sugar": "1 Cup",
+        "Brown Sugar": "1 Cup (packed)",
+        "Peanut Butter": "1 Cup1",
+        "Vanilla Extract": "2 tsp",
+        "Baking Soda": "1 1/2 tsp",
+        "bakeTemp": "375",
+        "bakeTime": "10 minutes"
+    }
+]
