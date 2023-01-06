@@ -1,22 +1,25 @@
 const router = require('express').Router();
-const { Baked, User } = require('../models');
+const { Shop, Bakedgoods, Recipes, Ingredients, User } = require('../models');
 // const withAuth = require('../utils/auth');
 
+console.log(Shop);
+console.log(Recipes);
+console.log(Ingredients);
+console.log(User);
 router.get('/', async (req, res) => {
   try {
-    // Get all bakedGoods and JOIN with user data
-    const bakedData = await Baked.findAll({
+    // Get all bakedGoods and JOIN with shop data
+    const bakedData = await Bakedgoods.findAll({
       include: [
         {
-          model: User,
-          attributes: ['name'],
+          model: Bakedgoods,
+          attributes: ['Name', 'Description'],
         },
       ],
     });
 
     // Serialize data so the template can read it
-    const bakedGoods = bakedData.map((Baked) => Baked.get({ plain: true }));
-
+    // const bakedGoods = bakedData.map((Baked) => Baked.get({ plain: true }));
     // Pass serialized data and session flag into template
     res.render('homepage', {
       bakedGoods,
@@ -27,13 +30,13 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/baked/:id', async (req, res) => {
+router.get('/recipes', async (req, res) => {
   try {
-    const bakedData = await Baked.findByPk(req.params.id, {
+    const recipeData = await Baked.findByPk(req.params.id, {
       include: [
         {
-          model: User,
-          attributes: ['name'],
+          model: Baked,
+          attributes: ['Name', 'Tag', 'Ingredients', 'Recipe'],
         },
       ],
     });
@@ -50,7 +53,7 @@ router.get('/baked/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-// router.get('/profile', withAuth, async (req, res) => {
+// router.get('/recipes', withAuth, async (req, res) => {
 //   try {
 //     // Find the logged in user based on the session ID
 //     const userData = await User.findByPk(req.session.user_id, {
@@ -60,7 +63,7 @@ router.get('/baked/:id', async (req, res) => {
 
 //     const user = userData.get({ plain: true });
 
-//     res.render('profile', {
+//     res.render('recipes', {
 //       ...user,
 //       logged_in: true,
 //     });
