@@ -1,7 +1,6 @@
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
-
 .no-button {
   background: none;
   border: none;
@@ -21,4 +20,12 @@ header, .project:not(:last-child) {
   color: #056605;
   font-weight: bold;
   margin-left: -5px;
+}
+.card {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 7px double var(--dark);
+  border-radius: 10px;
+  background-color: var(--light);
+  color: var(--dark);
 }
