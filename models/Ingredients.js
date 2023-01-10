@@ -5,7 +5,7 @@ class Ingredients extends Model {}
 
 Ingredients.init(
   {
-    baked_id: {
+    Recipe_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,

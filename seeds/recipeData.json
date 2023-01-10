@@ -1,51 +1,61 @@
 [
   {
     "baked_id": "1",
+    "name": "Plain",
     "makes": "1 Dozen",
     "recipe": "recipe here"
   },
   {
     "baked_id": "2",
+    "name": "Blueberry",
     "makes": "1 Dozen",
     "recipe": "recipe here"
   },
   {
     "baked_id": "3",
+    "name": "Everything",
     "makes": "1 Dozen",
     "recipe": "recipe here"
   },
   {
     "baked_id": "4",
+    "name": "Cinnamon Sugar",
     "makes": "1 Dozen",
     "recipe": "recipe here"
   },
   {
     "baked_id": "5",
+    "name": "Chocolate",
     "makes": "1",
     "recipe": "recipe here"
   },
   {
     "baked_id": "6",
+    "name": "White",
     "makes": "1",
     "recipe": "recipe here"
   },
   {
     "baked_id": "7",
+    "name": "Red Velvet",
     "makes": "1",
     "recipe": "recipe here"
   },
   {
     "baked_id": "8",
+    "name": "Chocolate Chip",
     "makes": "3 Dozen",
     "recipe": "recipe here"
   },
   {
     "baked_id": "9",
+    "name": "Sugar",
     "makes": "4 Dozen",
     "recipe": "recipe here"
   },
   {
     "baked_id": "10",
+    "name": "Peanut Butter",
     "makes": "4 Dozen",
     "recipe": "recipe here"
   }

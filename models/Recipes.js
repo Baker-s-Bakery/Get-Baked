@@ -11,6 +11,10 @@ Recipes.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     makes: {
       type: DataTypes.STRING,
       allowNull: false,
