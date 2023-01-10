@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
     // const bakedGoods = bakedData.map((Baked) => Baked.get({ plain: true }));
     // Pass serialized data and session flag into template
     res.render('homepage', {
-      bakedGoods,
+      bakedData,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
