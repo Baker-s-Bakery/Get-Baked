@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Shop, Bakedgoods, Recipes, Ingredients, User } = require('../models');
+const { Shop, Bakedgoods, User } = require('../models');
 // const withAuth = require('../utils/auth');
 
 console.log(Shop);
-console.log(Recipes);
-console.log(Ingredients);
+// console.log(Recipes);
+// console.log(Ingredients);
 console.log(User);
 router.get('/', async (req, res) => {
   try {
@@ -35,8 +35,8 @@ router.get('/recipes', async (req, res) => {
     const recipeData = await Baked.findByPk(req.params.id, {
       include: [
         {
-          model: Baked,
-          attributes: ['Name', 'Tag', 'Ingredients', 'Recipe'],
+          model: Bakedgoods,
+          attributes: ['Name', 'Tag'],
         },
       ],
     });

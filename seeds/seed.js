@@ -1,7 +1,7 @@
 const sequelize = require('../config/connection');
 const { Shop, Bakedgoods, Recipes, Ingredients } = require('../models');
 
-const shopData = require('../seeds/shopData.json');
+const shopData = require('./shopData');
 const bakedgoodsData = require('../seeds/bakedgoodsData.json');
 const recipeData = require('../seeds/recipeData.json');
 const ingredientData = require('../seeds/ingredientData.json');

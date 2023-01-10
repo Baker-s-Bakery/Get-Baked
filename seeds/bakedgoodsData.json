@@ -1,52 +1,52 @@
 [
   {
     "shop_id": "1",
-    "name": "Plain",
+    "Name": "Plain",
     "description": "!!!Description!!!"
   },
   {
     "shop_id": "1",
-    "name": "Blueberry",
+    "Name": "Blueberry",
     "description": "!!!Description!!!"
   },
   {
     "shop_id": "1",
-    "name": "Everything",
+    "Name": "Everything",
     "description": "!!!Description!!!"
   },
   {
     "shop_id": "1",
-    "name": "Cinnamon Sugar",
+    "Name": "Cinnamon Sugar",
     "description": "!!!Description!!!"
   },
   {
     "shop_id": "2",
-    "name": "Chocolate",
+    "Name": "Chocolate",
     "description": "!!!Description!!!"
   },
   {
     "shop_id": "2",
-    "name": "White",
+    "Name": "White",
     "description": "!!!Description!!!"
   },
   {
     "shop_id": "2",
-    "name": "Red Velvet",
+    "Name": "Red Velvet",
     "description": "!!!Description!!!"
   },
   {
     "shop_id": "3",
-    "name": "Chocolate Chip",
+    "Name": "Chocolate Chip",
     "description": "!!!Description!!!"
   },
   {
     "shop_id": "3",
-    "name": "Sugar",
+    "Name": "Sugar",
     "description": "!!!Description!!!"
   },
   {
     "shop_id": "3",
-    "name": "Peanut Butter",
+    "Name": "Peanut Butter",
     "description": "!!!Description!!!"
   }
 ]
