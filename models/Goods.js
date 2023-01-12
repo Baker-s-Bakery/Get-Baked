@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Bakedgoods extends Model {}
+class Goods extends Model {}
 
-Bakedgoods.init(
+Goods.init(
   {
-    shop_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -15,8 +15,19 @@ Bakedgoods.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     description: {
       type: DataTypes.STRING,
+    },
+    shop_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'shop',
+        key: 'id',
+      },
     },
   },
   {
@@ -24,8 +35,8 @@ Bakedgoods.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'baked',
+    modelName: 'goods',
   }
 );
 
-module.exports = Bakedgoods;
+module.exports = Goods;

@@ -1,22 +1,20 @@
 const Shop = require('./Shop');
-const Bakedgoods = require('./Bakedgoods');
+const Goods = require('./Goods');
 // const Recipes = require('./Recipes');
 // const Ingredients = require('../archive/Models/Ingredients');
 const User = require('./User');
 
-Shop.hasMany(Bakedgoods, {
+// Shop.hasMany(Goods, {});
+
+Goods.belongsTo(Shop, {
   foreignKey: 'shop_id',
 });
 
-Bakedgoods.belongsTo(Shop, {
-  foreignKey: 'shop_id',
-});
-
-// Bakedgoods.hasOne(Recipes, {
+// Goods.hasOne(Recipes, {
 //   foreignKey: 'baked_id',
 // });
 
-// Recipes.belongsTo(Bakedgoods, {
+// Recipes.belongsTo(Goods, {
 //   foreignKey: 'baked_id',
 // });
 
@@ -28,5 +26,4 @@ Bakedgoods.belongsTo(Shop, {
 //   foreignKey: 'recipe_id',
 // });
 
-
-module.exports = { Shop, Bakedgoods, User };
+module.exports = { Shop, Goods, User };

@@ -1,80 +1,76 @@
 const router = require('express').Router();
-const { Shop, Bakedgoods, User } = require('../models');
-// const withAuth = require('../utils/auth');
+const { Goods, Shop } = require('../models');
+// Import the custom middleware
+const withAuth = require('../utils/auth');
 
-console.log(Shop);
-// console.log(Recipes);
-// console.log(Ingredients);
-console.log(User);
+// GET all shopCategories for homepage
 router.get('/', async (req, res) => {
   try {
-    // Get all bakedGoods and JOIN with shop data
-    const bakedData = await Bakedgoods.findAll({
+    const dbShopData = await Shop.findAll({
       include: [
         {
-          model: Bakedgoods,
-          attributes: ['Name', 'Description'],
+          model: Goods,
+          attributes: ['name', 'description'],
         },
       ],
     });
 
-    // Serialize data so the template can read it
-    // const bakedGoods = bakedData.map((Baked) => Baked.get({ plain: true }));
-    // Pass serialized data and session flag into template
+    const shopCategories = dbShopData.map((shop) =>
+      shop.get({ plain: true })
+    );
+
     res.render('homepage', {
-      bakedData,
-      logged_in: req.session.logged_in,
+      shopCategories,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get('/recipes', async (req, res) => {
+// GET one category
+// Use the custom middleware before allowing the user to access the shop
+router.get('/shop/:id', withAuth, async (req, res) => {
   try {
-    const recipeData = await Baked.findByPk(req.params.id, {
+    const dbShopData = await Shop.findByPk(req.params.id, {
       include: [
         {
-          model: Bakedgoods,
-          attributes: ['Name', 'Tag'],
+          model: Goods,
+          attributes: [
+            'id',
+            'name',
+            'description',
+          ],
         },
       ],
     });
 
-    const baked = bakedData.get({ plain: true });
-
-    res.render('recipes', {
-      ...baked,
-      logged_in: req.session.logged_in,
-    });
+    const shop = dbShopData.get({ plain: true });
+    res.render('shop', { shop, loggedIn: req.session.loggedIn });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
 
-// Use withAuth middleware to prevent access to route
-// router.get('/recipes', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const userData = await User.findByPk(req.session.user_id, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Baked }],
-//     });
+// GET one painting
+// Use the custom middleware before allowing the user to access the painting
+router.get('/painting/:id', withAuth, async (req, res) => {
+  try {
+    const dbPaintingData = await Painting.findByPk(req.params.id);
 
-//     const user = userData.get({ plain: true });
+    const painting = dbPaintingData.get({ plain: true });
 
-//     res.render('recipes', {
-//       ...user,
-//       logged_in: true,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.render('painting', { painting, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
