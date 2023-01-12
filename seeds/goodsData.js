@@ -1,78 +1,78 @@
 const { Goods } = require('../models');
 
-const goodsdata = [
+const goodsData = [
   {
-    shop_id: '1',
     name: 'Plain',
     filename:'file-name-here',
     price:'$',
     description: '!!!Description!!!',
+    shop_id: '1',
   },
   {
-    shop_id: '1',
     name: 'Blueberry',
     filename:'file-name-here',
     price:'$',
     description: '!!!Description!!!',
+    shop_id: '1',
   },
   {
-    shop_id: '1',
     name: 'Everything',
     filename:'file-name-here',
     price:'$',
     description: '!!!Description!!!',
+    shop_id: '1',
   },
   {
-    shop_id: '1',
     name: 'Cinnamon Sugar',
     filename:'file-name-here',
     price:'$',
     description: '!!!Description!!!',
+    shop_id: '1',
   },
   {
-    shop_id: '2',
     name: 'Chocolate',
     filename:'file-name-here',
     price:'$',
     description: '!!!Description!!!',
+    shop_id: '2',
   },
   {
-    shop_id: '2',
     name: 'White',
     filename:'file-name-here',
     price:'$',
     description: '!!!Description!!!',
+    shop_id: '2',
   },
   {
-    shop_id: '2',
     name: 'Red Velvet',
     filename:'file-name-here',
     price:'$',
     description: '!!!Description!!!',
+    shop_id: '2',
   },
   {
-    shop_id: '3',
     name: 'Chocolate Chip',
     filename:'file-name-here',
     price:'$',
     description: '!!!Description!!!',
+    shop_id: '3',
   },
   {
-    shop_id: '3',
     name: 'Sugar',
     filename:'file-name-here',
     price:'$',
     description: '!!!Description!!!',
+    shop_id: '3',
   },
   {
-    shop_id: '3',
     name: 'Peanut Butter',
     filename:'file-name-here',
     price:'$',
     description: '!!!Description!!!',
+    shop_id: '3',
   }
 ];
 
-const seedGoods = () => Goods.bulkCreate(goodsdata);
+const seedGoods = () => Goods.bulkCreate(goodsData);
 
 module.exports = seedGoods;

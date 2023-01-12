@@ -29,3 +29,30 @@ header, .project:not(:last-child) {
   background-color: var(--light);
   color: var(--dark);
 }
+h1 {
+  text-align: center;
+}
+header{
+  background-color: burlywood;
+}
+div{
+  background-color: tan;
+}
+html {
+  background-color: tan;
+}
+section.card{
+  background-color: tan;
+}
+a {
+  font-weight: 500;
+  background-color: none ;
+  border-radius: 4000px;
+  border-color: tan;
+  
+ }
+ img {
+  border-style: none;
+  border-radius: 20px;
+  margin-left: 250px;
+ }

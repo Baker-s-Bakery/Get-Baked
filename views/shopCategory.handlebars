@@ -1,8 +1,8 @@
 <section class="container">
-  <h3 class="Type-name">{{Type.name}}</h3>
+  <h3 class="shop-name">{{shop.name}}</h3>
   <section class="flex-row justify-center">
-    {{#each goodsType.Goods as |Good|}}
-    {{> bakedGood-details}}
+    {{#each shop}}
+    {{> shop-details}}
     {{/each}}
   </section>
 </section>
