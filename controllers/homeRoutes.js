@@ -3,7 +3,8 @@ const { Goods, Shop } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
-// GET all shopCategories for homepage
+
+// GET all shop for homepage
 router.get('/', async (req, res) => {
   try {
     const dbShopData = await Shop.findAll({
@@ -15,12 +16,12 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const shopCategories = dbShopData.map((shop) =>
+    const shops = dbShopData.map((shop) =>
       shop.get({ plain: true })
     );
 
     res.render('homepage', {
-      shopCategories,
+      shops,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -40,6 +41,7 @@ router.get('/shop/:id', withAuth, async (req, res) => {
           attributes: [
             'id',
             'name',
+            'filename',
             'description',
           ],
         },
@@ -54,15 +56,15 @@ router.get('/shop/:id', withAuth, async (req, res) => {
   }
 });
 
-// GET one painting
-// Use the custom middleware before allowing the user to access the painting
-router.get('/painting/:id', withAuth, async (req, res) => {
+// GET one goods
+// Use the custom middleware before allowing the user to access the goods
+router.get('/goods/:id', withAuth, async (req, res) => {
   try {
-    const dbPaintingData = await Painting.findByPk(req.params.id);
+    const dbgoodsData = await Goods.findByPk(req.params.id);
 
-    const painting = dbPaintingData.get({ plain: true });
+    const goods = dbgoodsData.get({ plain: true });
 
-    res.render('painting', { painting, loggedIn: req.session.loggedIn });
+    res.render('goods', { goods, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

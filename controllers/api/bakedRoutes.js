@@ -1,38 +1,39 @@
 const router = require('express').Router();
-const { Baked } = require('../../models');
-const withAuth = require('../../utils/auth');
+const { Goods } = require('../../models');
+// const withAuth = require('../../utils/auth');
+// withAuth,
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    const newBaked = await Baked.create({
+    const newGoods = await Goods.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newBaked);
+    res.status(200).json(newGoods);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
-  try {
-    const bakedData = await Baked.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
+// router.delete('/:id', withAuth, async (req, res) => {
+//   try {
+//     const goodsData = await Goods.destroy({
+//       where: {
+//         id: req.params.id,
+//         user_id: req.session.user_id,
+//       },
+//     });
 
-    if (!bakedData) {
-      res.status(404).json({ message: 'No baked goods found with this id!' });
-      return;
-    }
+//     if (!goodsData) {
+//       res.status(404).json({ message: 'No Goods goods found with this id!' });
+//       return;
+//     }
 
-    res.status(200).json(BakedData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.status(200).json(goodsData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;

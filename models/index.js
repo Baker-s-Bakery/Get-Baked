@@ -4,7 +4,9 @@ const Goods = require('./Goods');
 // const Ingredients = require('../archive/Models/Ingredients');
 const User = require('./User');
 
-// Shop.hasMany(Goods, {});
+Shop.hasMany(Goods, {
+  foreignKey: 'shop_id',
+});
 
 Goods.belongsTo(Shop, {
   foreignKey: 'shop_id',
