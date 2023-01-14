@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     const shops = dbShopData.map((shop) =>
       shop.get({ plain: true })
     );
-
+    console.log('shops; ', shops);
     res.render('homepage', {
       shops,
       loggedIn: req.session.loggedIn,
@@ -49,7 +49,7 @@ router.get('/shop/:id', withAuth, async (req, res) => {
     });
 
     const shop = dbShopData.get({ plain: true });
-    res.render('shop', { shop, loggedIn: req.session.loggedIn });
+    res.render('goods', { shop, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

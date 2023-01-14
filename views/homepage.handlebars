@@ -1,3 +1,8 @@
-{{#each shops as |shop| }}
-{{> shop-details}}
-{{/each}}
+{{#if loggedIn}}
+    {{#each shops as |shop| }}
+    {{log  "shop desc: "shop.description}}
+    {{> shop-details}}
+    {{/each}}
+    {{else}}
+    <p>Log in to Get Baked~</p>
+{{/if}}
