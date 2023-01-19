@@ -1,9 +1,11 @@
 <section class="container">
+  <img src="/images/{{goods.filename}}" alt="{{goods.description}}">
   <h3 class="goods-name">{{goods.name}}</h3>
   <section class="flex-row justify-center">
-    console.log(goods)
-    {{#each goods}}
-    {{> bakedGood-details}}
-    {{/each}}
+    {{log 'goods: ' goods}}
+    
+      <p>{{goods.description}}</p>
+      <p>{{goods.price}}</p>
+
   </section>
 </section>
